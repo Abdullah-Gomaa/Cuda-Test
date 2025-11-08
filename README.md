@@ -168,3 +168,20 @@ For hybrid systems, use:
 ```bash
 prime-run python3 test_cuda_script.py
 ```
+
+
+# Time Test C vs Cuda Matrix Multiplications
+
+Compile both codes:
+
+```bash
+gcc ./src/matmult.c -o ./obj/matMultC
+nvcc ./src/matMult.cu -o ./obj/matMultCuda
+```
+
+Run both programs:
+
+```bash
+time ./obj/matMultC 
+time prime-run ./obj/matMultCuda
+```
